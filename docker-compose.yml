@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  dnsmasq:
+    build: .
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 5353:53/udp
+    environment:
+      - WHITE_LIST="localhost|metrika|analytics|c.allegrostatic.pl|odnoklassniki.ru|no-ip.com|vk.cc|db.tt|aliexpress|clck.ru|j.mp"
