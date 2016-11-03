@@ -23,5 +23,5 @@ rm -f *.txt
 
 echo "Starting DNSMask..."
 
-dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/var/run/dnsmasq.pid --listen-address=0.0.0.0 --cache-size=0 --conf-file=/dev/null \
+dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/var/run/dnsmasq.pid --listen-address=0.0.0.0 --cache-size=10000 --conf-file=/dev/null \
 	--proxy-dnssec --conf-dir=/etc/dnsmasq.d --conf-file=/etc/adblock --server=8.8.8.8 --server=8.8.4.4
